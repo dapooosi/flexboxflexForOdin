@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Farbschemas */
+.blau {
+    background-color: #1F2937;
+    margin: 0;
+    padding: 0;
+}
+
+.weiss {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+.grau {
+    background-color: #e5e7eb;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 14%;
+    padding: 24px 0;
+    color: #F9faf8;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #F9FaF8;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.headerlinks {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 16px;
+}
+
+.headerlinks a {
+    color: #F9FaF8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.headerlinks a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.heroSection {
+    background-color: #1F2937;
+    color: #F9FaF8;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    margin: 0 14%;
+    padding: 120px 0;
+}
+
+.heroL {
+    flex: 1 1 0;
+}
+
+.heroR {
+    flex: 1 1 0;
+    display: flex;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FaF8;
+    margin: 0 0 16px 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+.heroSection p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.heroButton {
+    background-color: #3c82f6;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroButton:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.heroimg {
+    width: 100%;
+    aspect-ratio: 16/7;
+    background: #6b7280 url('bild.jpg') center/cover no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Random Info Section */
+.randomInfoSection {
+    padding: 80px 0;
+    margin: 0 14%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+    margin: 0 0 48px 0;
+    padding: 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.box {
+    flex: 1;
+    text-align: center;
+}
+
+.box img,
+.box div {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 16px;
+    border: 4px solid #3c82f6;
+    border-radius: 12px;
+    background-color: #f3f4f6;
+    transition: transform 0.3s ease;
+}
+
+.box:hover img,
+.box:hover div {
+    transform: scale(1.05);
+}
+
+.boxtext {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Quote Section */
+.quoteSection {
+    background-color: #e5e7eb;
+    padding: 100px 20%;
+}
+
+.quote {
+    color: #1f2937;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.quote::before {
+    content: '"';
+}
+
+.quote::after {
+    content: '"';
+}
+
+/* Call to Action Section */
+.calltoactionSection {
+    background-color: #3c82f6;
+    margin: 80px 20%;
+    padding: 48px 64px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(60, 130, 246, 0.2);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.calltoactionSection:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(60, 130, 246, 0.3);
+}
+
+/* Footer */
+.footer {
+    margin: 0 14%;
+    color: #F9faf8;
+    padding: 32px 16px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    header,
+    .heroSection,
+    .randomInfoSection,
+    .footer {
+        margin: 0 5%;
+    }
+
+    .heroSection {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .icons {
+        flex-direction: column;
+    }
+
+    .calltoactionSection {
+        margin: 48px 5%;
+        padding: 32px;
+    }
+
+    .quoteSection {
+        padding: 60px 10%;
+    }
+
+    .quote {
+        font-size: 24px;
+    }
+}
